@@ -1,0 +1,156 @@
+@import "null.style.scss";
+@import url(https://fonts.googleapis.com/css?family=Rubik:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=B612+Mono:regular&display-swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display-swap);
+
+html {
+  min-width: 320px;
+}
+
+body {
+
+  font-family: "Poppins", sans-serif;
+  background: #091921;
+	color: rgb(175, 175, 175);
+}
+
+
+[class*="__container"] {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+ul li {
+  padding: 10px 0;
+}
+
+
+//mixins
+@mixin gray_BG {
+	background-color: rgb(95, 95, 95);
+}
+@mixin gray_C {
+	color: rgb(95, 95, 95);
+}
+
+$gray: rgb(95, 95, 95);
+
+// 
+
+@mixin con {
+	min-height: 20vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	flex: 1 0 20vh;
+	display: flex;
+	align-items: center;
+
+	&__container {
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 500;
+	}
+}
+.todo {
+	flex: 1 0 20vh;
+	display: flex;
+	align-items: center;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__body {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+
+	@mixin dec {
+		padding: 0.5rem;
+		font-size: 2rem;
+		background: rgb(255, 255, 255);
+	} 
+
+	&__input {
+		@include dec;
+		flex: 0 1 50%;
+	}
+
+	&__button {
+		@include dec;
+		background-color: rgb(163, 153, 6);
+		transition: all 0.3s ease 0s;
+		cursor: pointer;
+
+		&:hover{
+			background-color: rgb(138, 129, 5);
+		}
+	}
+
+	&__container-todo{
+		display: flex;align-items: center;justify-content: center;
+	}
+
+	&__list{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5rem;
+	}
+
+	&__item {
+		overflow: auto;
+		min-width: 25rem;
+		display: flex;
+		flex: 0 0 auto;
+		align-items: center;
+		border-radius: 15px;
+		overflow: hidden;
+		@include gray_BG;
+
+		& li {
+			overflow: auto;
+			flex: 1 1 auto;
+			margin-left: 1%;
+			// background-color: rgb(95, 95, 95);
+		}
+	}
+
+	&__button-list{
+		width: 40px;
+		height: 40px;
+		flex: 0 0 40px;
+		// background-color: rgb(95, 95, 95);
+
+		&_complete {
+			border-radius: 15px 0 0 15px;
+			border-right: 0.15px solid $gray;
+		}
+
+		&_trash {
+			border-radius:0 15px 15px 0;
+			border-left: 0.15px solid $gray;
+		}
+	}
+}
+
+
+
+
