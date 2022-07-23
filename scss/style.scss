@@ -9,12 +9,10 @@ html {
 }
 
 body {
-
   font-family: "Poppins", sans-serif;
   background: #091921;
 	color: rgb(175, 175, 175);
 }
-
 
 [class*="__container"] {
   max-width: 1470px;
@@ -44,7 +42,9 @@ ul li {
 
 $gray: rgb(95, 95, 95);
 
+
 // 
+
 
 @mixin con {
 	min-height: 20vh;
@@ -128,8 +128,7 @@ $gray: rgb(95, 95, 95);
 		& li {
 			overflow: auto;
 			flex: 1 1 auto;
-			margin-left: 1%;
-			// background-color: rgb(95, 95, 95);
+			margin-left: 2%;
 		}
 	}
 
@@ -137,7 +136,6 @@ $gray: rgb(95, 95, 95);
 		width: 40px;
 		height: 40px;
 		flex: 0 0 40px;
-		// background-color: rgb(95, 95, 95);
 
 		&_complete {
 			border-radius: 15px 0 0 15px;
@@ -147,10 +145,15 @@ $gray: rgb(95, 95, 95);
 		&_trash {
 			border-radius:0 15px 15px 0;
 			border-left: 0.15px solid $gray;
+			
 		}
 	}
 }
 
+.fa-check,
+.fa-trash{
+	pointer-events: none;
+}
 
 
 

@@ -213,7 +213,7 @@ ul li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 .todo__button-list {
   width: 40px;
@@ -229,4 +229,9 @@ ul li {
 .todo__button-list_trash {
   border-radius: 0 15px 15px 0;
   border-left: 0.15px solid rgb(95, 95, 95);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
 }
