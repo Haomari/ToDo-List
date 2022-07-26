@@ -80,6 +80,7 @@ $gray: rgb(95, 95, 95);
 	&__body {
 		display: flex;
 		margin-bottom: 20px;
+
 	}
 
 
@@ -97,7 +98,6 @@ $gray: rgb(95, 95, 95);
 	&__button {
 		@include dec;
 		background-color: rgb(163, 153, 6);
-		transition: all 0.3s ease 0s;
 		cursor: pointer;
 
 		&:hover{
@@ -123,12 +123,23 @@ $gray: rgb(95, 95, 95);
 		align-items: center;
 		border-radius: 15px;
 		overflow: hidden;
+		transition: all 0.3s ease 0s;
 		@include gray_BG;
 
 		& li {
 			overflow: auto;
 			flex: 1 1 auto;
 			margin-left: 2%;
+		}
+
+		&.completed{
+			text-decoration: line-through;
+			opacity: 0.5;
+		}
+
+		&.fall{
+			transform: translate(8rem) rotateZ(20deg);
+			opacity: 0;	
 		}
 	}
 

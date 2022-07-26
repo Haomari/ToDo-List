@@ -168,9 +168,6 @@ ul li {
   font-size: 2rem;
   background: rgb(255, 255, 255);
   background-color: rgb(163, 153, 6);
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   cursor: pointer;
 }
 .todo__button:hover {
@@ -206,6 +203,9 @@ ul li {
           align-items: center;
   border-radius: 15px;
   overflow: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   background-color: rgb(95, 95, 95);
 }
 .todo__item li {
@@ -214,6 +214,16 @@ ul li {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin-left: 2%;
+}
+.todo__item.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.todo__item.fall {
+  -webkit-transform: translate(8rem) rotateZ(20deg);
+      -ms-transform: translate(8rem) rotate(20deg);
+          transform: translate(8rem) rotateZ(20deg);
+  opacity: 0;
 }
 .todo__button-list {
   width: 40px;

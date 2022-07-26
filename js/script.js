@@ -39,12 +39,19 @@ function addTodo(event){
 
 function deleteCheck(e){
 	const item = e.target;
-	// console.log("2")
 
 	if (item.classList[1] === "todo__button-list_trash") {
 		const todo = item.parentElement;
-		todo.remove()
+
+		todo.classList.add("fall")
+		todo.addEventListener('transitionend', function(){
+			todo.remove();
+		});
+		/* todo.remove(); */
 	}
 
-  if(item.classList)
+  if(item.classList[1] === "todo__button-list_complete"){
+		const todo = item.parentElement;
+		todo.classList.toggle('completed')
+	};
 }
