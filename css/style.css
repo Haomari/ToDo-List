@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Rubik:regular&display-swap);
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono:regular&display-swap);
 @import url(https://fonts.googleapis.com/css?family=B612+Mono:regular&display-swap);
@@ -239,6 +240,32 @@ ul li {
 .todo__button-list_trash {
   border-radius: 0 15px 15px 0;
   border-left: 0.15px solid rgb(95, 95, 95);
+}
+.todo__filter {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+.todo__select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.todo__select select {
+  color: dark;
+  width: 10rem;
+  cursor: pointer;
+}
+.todo__select select::after {
+  content: "▼";
+  position: absolute;
+  background-color: rgb(163, 153, 6);
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
 }
 
 .fa-check,

@@ -159,6 +159,33 @@ $gray: rgb(95, 95, 95);
 			
 		}
 	}
+
+	&__filter{
+		appearance: none;
+		outline: none;
+		border: none;
+	}
+
+	&__select{
+		margin: 1rem;
+		position: relative;
+		overflow: hidden;
+
+		& select{
+			color: dark;
+			width: 10rem;
+			cursor: pointer;
+
+			&::after{
+				content: '\25BC';
+				position: absolute;
+				background-color: rgb(163, 153, 6);
+				top: 0;right: 0;
+				padding: 1rem;
+				pointer-events: none;
+			}
+		}
+	}
 }
 
 .fa-check,
