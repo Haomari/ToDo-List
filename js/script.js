@@ -2,12 +2,21 @@
 
 const todoInput = document.querySelector('.todo__input');
 const todoButton = document.querySelector('.todo__button');
-const todoList = document.querySelector('.todo__list')
+const todoList = document.querySelector('.todo__list');
+const todoFilter = document.querySelector('.todo__filter');
+const todoSelect = document.querySelector('.todo__select');
+
 
 
 todoButton.addEventListener('click', addTodo)
 todoList.addEventListener('click', deleteCheck)
+todoFilter.addEventListener('click', filterActive)
 
+
+
+function filterActive() {
+	todoSelect.classList.toggle('active')
+}
 
 function addTodo(event){
 	event.preventDefault();
@@ -47,7 +56,6 @@ function deleteCheck(e){
 		todo.addEventListener('transitionend', function(){
 			todo.remove();
 		});
-		/* todo.remove(); */
 	}
 
   if(item.classList[1] === "todo__button-list_complete"){

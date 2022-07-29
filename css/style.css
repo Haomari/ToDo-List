@@ -163,13 +163,28 @@ ul li {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  border-radius: 20px 0 0 20px;
+  overflow: auto;
 }
 .todo__button {
   padding: 0.5rem;
   font-size: 2rem;
   background: rgb(255, 255, 255);
+  min-width: 50px;
   background-color: rgb(163, 153, 6);
+  border-radius: 0 20px 20px 0;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  /* 		& i {
+  			position: absolute;
+  			top: 0;left: 0;
+  			width: 100%;
+  			height: 100%;
+  			z-index: 2;
+  		} */
 }
 .todo__button:hover {
   background-color: rgb(138, 129, 5);
@@ -247,25 +262,53 @@ ul li {
           appearance: none;
   outline: none;
   border: none;
+  min-height: 100%;
+  min-width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .todo__select {
-  margin: 1rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+  margin: 0 1rem;
   position: relative;
   overflow: hidden;
+  border-radius: 20px;
 }
-.todo__select select {
-  color: dark;
-  width: 10rem;
-  cursor: pointer;
+.todo__select:hover span {
+  background-color: rgb(138, 129, 5);
 }
-.todo__select select::after {
+.todo__select.active img {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.todo__select span {
   content: "▼";
   position: absolute;
   background-color: rgb(163, 153, 6);
   top: 0;
   right: 0;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   pointer-events: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.todo__select span img {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 12px;
+  height: 12px;
+}
+.todo__select select {
+  color: dark;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
 }
 
 .fa-check,
