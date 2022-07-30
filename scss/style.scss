@@ -94,6 +94,10 @@ $gray: rgb(95, 95, 95);
 		flex: 0 1 50%;
 		border-radius: 20px 0 0 20px;
 		overflow: auto;
+
+		&:active{
+			box-shadow: inset hoff voff blur rgb(255, 255, 255);
+		}
 	}
 
 	&__button {

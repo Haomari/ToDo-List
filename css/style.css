@@ -166,6 +166,10 @@ ul li {
   border-radius: 20px 0 0 20px;
   overflow: auto;
 }
+.todo__input:active {
+  -webkit-box-shadow: inset hoff voff blur rgb(255, 255, 255);
+          box-shadow: inset hoff voff blur rgb(255, 255, 255);
+}
 .todo__button {
   padding: 0.5rem;
   font-size: 2rem;
