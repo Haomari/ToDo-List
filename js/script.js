@@ -8,6 +8,8 @@ class TODOItem {
 }
 
 
+
+
 const todoInput = document.querySelector('.todo__input');
 const todoButton = document.querySelector('.todo__button');
 const todoList = document.querySelector('.todo__list');
@@ -19,11 +21,15 @@ const COMPLETED = "COMPLETED";
 
 let todos = [];
 
+
+
+
 document.addEventListener('DOMContentLoaded', getTodos)
 todoButton.addEventListener('click', addTodo)
 todoList.addEventListener('click', deleteCheck)
 todoFilter.addEventListener('click', filterActive)
 todoFilter.addEventListener('click', filterTodo)
+
 
 
 
@@ -42,7 +48,9 @@ function checkLocalTodos() {
 
 function addTodo(event) {
 	event.preventDefault();
-
+	if(!todoInput.value){
+		alert("Please type some text")
+	}else{
 	const todoDiv = document.createElement("div");
 	todoDiv.classList.add("todo__item");
 
@@ -70,6 +78,7 @@ function addTodo(event) {
 	todoInput.value = "";
 
 	filterTodo(e);
+	}
 }
 
 function deleteCheck(e) {
