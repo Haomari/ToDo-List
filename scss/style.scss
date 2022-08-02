@@ -56,6 +56,7 @@ $gray: rgb(95, 95, 95);
 .header {
 	flex: 1 0 20vh;
 	display: flex;
+	margin: 1.2rem 0;
 	align-items: center;
 
 	&__container {
@@ -67,8 +68,6 @@ $gray: rgb(95, 95, 95);
 	}
 }
 .todo {
-	flex: 1 0 20vh;
-	display: flex;
 	align-items: center;
 
 	&__container {

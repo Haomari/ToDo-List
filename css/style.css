@@ -118,6 +118,7 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1.2rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -128,12 +129,6 @@ ul li {
 }
 
 .todo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 20vh;
-          flex: 1 0 20vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
